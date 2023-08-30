@@ -2,7 +2,7 @@
 /**
  * pop_listint - to pop list
  * @head: head pointer
- * Return: return the data, or 0 if no data 
+ * Return: return the data, or 0 if no data
  */
 int pop_listint(listint_t **head)
 {
