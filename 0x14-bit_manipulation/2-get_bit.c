@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_bit - get bit at fine lists 
+ * get_bit - get bit at fine lists
  * @n: binary number
  * @index: index within binary number
  * Return: temp 0 or (1), or -1 if error
