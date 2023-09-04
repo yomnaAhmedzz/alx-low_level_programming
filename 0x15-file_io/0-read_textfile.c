@@ -5,7 +5,7 @@
  * read_textfile- yomnaa 
  * @filename: yomnaaaa
  * @letters: numberr
- * Return: always 0
+ * Return: always0
  *        
  */
 ssize_t read_textfile(const char *filename, size_t letters)
