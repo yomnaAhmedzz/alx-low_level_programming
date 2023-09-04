@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * create_file - file.
- * @filename: Ana.
- * @text_content: A.
+ * create_file - 1-create_file.c.
+ * @filename: 1-create_file.c.
+ * @text_content: 1-create_file.c.
  *
- * Return: return 0.
+ * Return: If the function fails - -1.
+ *         Otherwise - 1.
  */
 int create_file(const char *filename, char *text_content)
 {
-	int y, l, len = 0;
+	int d, w, len = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -20,13 +21,13 @@ int create_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	y = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	l = write(fd, text_content, len);
+	d = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(d, text_content, len);
 
-	if (y == -1 || l == -1)
+	if (d == -1 || w == -1)
 		return (-1);
 
-	close(y);
+	close(d);
 
 	return (1);
 }
