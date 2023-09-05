@@ -6,9 +6,10 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer - okey.
- * @file: 3-cp.c.
- * Return:3-cp.c.
+ * create_buffer - buffer.
+ * @file: name.
+ *
+ * Return: buffer.
  */
 char *create_buffer(char *file)
 {
@@ -27,33 +28,34 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Closes file descriptors.
- * @d: close.
+ * close_file - Close.
+ * @fd: close.
  */
-void close_file(int d)
+void close_file(int fd)
 {
 	int c;
 
-	c = close(d);
+	c = close(fd);
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close d %d\n", d);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 
 /**
- * main - file.
- * @argc: The number.
- * @argv: An array.
+ * main - another file.
+ * @argc: program.
+ * @argv: arguments.
  *
- * Return:  success.
- * Description: exit code 100.
+ * Return: 0 on success.
+ *
+ * Description: - exit code 100.
  */
 int main(int argc, char *argv[])
 {
-	int from, to, r, yy;
+	int from, to, r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -76,8 +78,8 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		yy= write(to, buffer, r);
-		if (to == -1 || yy== -1)
+		w = write(to, buffer, r);
+		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
