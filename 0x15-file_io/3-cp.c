@@ -8,7 +8,6 @@ void close_file(int fd);
 /**
  * create_buffer - okey.
  * @file: 3-cp.c.
- *
  * Return:3-cp.c.
  */
 char *create_buffer(char *file)
@@ -50,7 +49,6 @@ void close_file(int d)
  * @argv: An array.
  *
  * Return:  success.
- *
  * Description: exit code 100.
  */
 int main(int argc, char *argv[])
